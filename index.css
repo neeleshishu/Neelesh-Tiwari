@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#container1{
+  height: 28rem;
+  margin: 1rem;
+}
+#container2{
+  height: 28rem;
+  width: 16rem;
+}
+
+.container div {
+  width: 16rem;
+border: 1px solid #383838;
+margin: 0px;
+}
+
+.item {
+  height: 33%;
+cursor: move;
+}
+
+.img {
+  width: 16rem;
+  height: 9.3rem;
+object-fit: cover;
+}
+
+.item.dragging {
+  opacity: 0.5;
+}
+
+.success-message {
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .container div {
+    width: calc(100% - 20px);
+    margin: 10px;
+  }
+}

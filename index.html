@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Drag and Drop Example</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <h1 style="text-align: center;">Drag and Drop Website</h1>
+  <div class="container">
+    
+    <div id="container1">
+      <!-- Draggable items -->
+      <div class="item" draggable="true">
+        <img src="https://picsum.photos/200/200?random=1" class="img" alt="Image 1">
+      </div>
+      <div class="item" draggable="true">
+        <img src="https://picsum.photos/200/200?random=2" class="img" alt="Image 2">
+      </div>
+      <div class="item" draggable="true">
+        <img src="https://picsum.photos/200/200?random=3" class="img" alt="Image 3">
+      </div>
+    </div>
+    <div id="container2"></div>
+  </div>
+
+  <div class="success-message"></div>
+
+  <button onclick="reset()">Reset</button>
+
+  <script>
+    
+
+    function reset() {
+      var container1 = document.getElementById('container1');
+  var container2 = document.getElementById('container2');
+  var successMessage = document.querySelector('.success-message');
+
+  while (container2.firstChild) {
+    container1.appendChild(container2.firstChild);
+  }
+
+  successMessage.textContent = '';
+    }
+
+   
+  </script>
+  <script src="index.js"></script>
+</body>
+</html>
